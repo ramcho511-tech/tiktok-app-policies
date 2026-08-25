@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  <meta charset="UTF-8">
+  <title>TikTok Auth Callback</title>
+</head>
+<body>
+<p id="msg">Completing sign-in, redirecting to local app...</p>
+  <script>
+  var params = window.location.search;
+var target = "http://localhost:8787/callback" + params;
+window.location.href = target;
+document.getElementById("msg").innerHTML = "If you are not redirected automatically, copy this URL and open it: " + target;
+</script>
+  </body>
+  </html>
+  
